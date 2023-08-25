@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Kalam:wght@300&family=Open+Sans:wght@400;600;700;800&family=Oswald:wght@200;300&family=Preahvihear&family=Ubuntu:wght@300;400;500;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Ubuntu", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../imgs/background.jpg);
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000080;
+    z-index: -10;
+}
+
+@media (max-width: 991px) {
+    .container {
+        width: 980px;
+    }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-top: 30px;
+  padding-left: 50px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 600;
+  color: red;
+}
+
+ul {
+  width: 60%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul li {
+    margin-top: 3px;
+    position: relative;
+}
+
+ul a {
+  border-bottom: 2px solid transparent;
+}
+
+ul a::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    background: red;
+    bottom: -5px;
+  transition: 0.5s;
+}
+
+ul a:hover::before {
+    width: 100%;
+  transition: 0.5s;
+}
+
+ul a:hover {
+    color: red;
+  transition: 0.5s;
+}
+
+.content {
+  color: white;
+  padding-left: 80px;
+  top: 48%;
+  transform: translateY(-50%);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content h2 {
+  font-size: 60px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.content .main-p {
+  color: #afafaf;
+  line-height: 1.7;
+  width: 60%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.content .po {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.content .po {
+  border-bottom: 2px solid transparent;
+}
+
+.content .po p::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    background: red;
+    bottom: 25px;
+  transition: 0.5s;
+}
+
+.content .po p:hover::before {
+    width: fit-content;
+  transition: 0.5s;
+}
+
+.content .po p:hover {
+    color: red;
+  transition: 0.5s;
+}
+
+.content .po p {
+  color: white;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: fit-content;
+  margin-right: 50px;
+  margin-bottom: 30px;
+}
+
+.content .stars {
+  display: flex;
+  justify-content: baseline;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.content .stars i {
+  color: red;
+  margin-left: 5px;
+}
+
+.content .stars .star {
+    margin-right: 40px;
+}
+
+.det {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.det p {
+    padding-right: 40px;
+}
+
+.det p:last-child {
+    color: #929292;
+}
+
+.progress-loader {
+      top: 15px;
+    left: 25%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  color: red;
+  display: flex;
+}
+
+.progress-loader {
+  width:400px;
+  height: 3px;
+  border-radius: 7px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: red;
+}
+
+.progress-loader span {
+    color: #929292;
+    position: absolute;
+    right: -30%;
+    top: 23%;
+}
+
+.progress {
+  content: "";
+  width: 1px;
+  height: 3px;
+  border-radius: 7px;
+  background: red;
+  transition: 0.5s;
+  animation: loading1274 2s ease infinite;
+}
+
+@keyframes loading1274 {
+  0% {
+    width: 0%;
+  }
+
+  10% {
+    width: 10%;
+  }
+
+  50% {
+    width: 40%;
+  }
+
+  60% {
+    width: 60%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.content img {
+  width: 200px;
+  height: 200px;
+}
+
+.content .b {
+  display: block;
+}
+
+.content button {
+  font-size: 20px;
+  font-weight: 100;
+  padding: 10px 30px;
+  margin-top: 30px;
+  border-radius: 30px;
+  color: white;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.content .red {
+    background-color: red;
+  border: 1px solid red;
+  transition: 0.5s;
+}
+
+.content button:last-child {
+  margin-left: 50px;
+  background-color: transparent;
+  border: 1px solid red;
+  transition: 0.5s;
+}
+
+.content .red:hover {
+    background-color: transparent;
+  transition: 0.5s;
+}
+
+.content button:last-child:hover {
+  background-color: red;
+  transition: 0.5s;
+}
+
+.content button i {
+    margin-right: 10px;
+}
+
+.content .imgg {
+    position: relative;
+    right: 3%;
+    border: 3px solid #777;
+    height: fit-content;
+    width: fit-content;
+}
+
+.content .imgg img {
+    height: 500px;
+    width: 400px;
+}
+
+@media (max-width: 991px) {
+    .content .imgg img {
+        display: none;
+    }
+}
+
+.container-input {
+  position: relative;
+}
+
+.input {
+  width: 150px;
+  padding: 10px 0px 10px 40px;
+  border-radius: 9999px;
+  border: solid 1px #333;
+  transition: all .2s ease-in-out;
+  outline: none;
+  opacity: 0.8;
+}
+
+.container-input svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+
+.input:focus {
+  opacity: 1;
+  width: 250px;
+}
+
+.container header .imggg img {
+    width: 50px;
+    height: 50%;
+    border: 1px solid red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container header .redd {
+    color: red;
+}
+
+.container .po .redd {
+    color: red;
+}
+
+/* ai */
+
+.mo-fire {
+  width: 75px;
+    height: auto;
+    position: absolute;
+    margin-left: -100px;
+    right: 17%;
+    bottom: 30px;
+}
+.mo-fire svg {
+  width: 100%;
+  height: auto;
+  position: relative
+}
+.flame {
+  animation-name: flamefly;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  transform-origin: 50% 50% 0;
+}
+.flame.one {
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+.flame3.two{
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.flame-main {
+  animation-name: flameWobble;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.flame-main.one {
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+.flame-main.two {
+  animation-duration: 3s;
+  animation-delay: 2s;
+}
+.flame-main.three {
+  animation-duration: 2.1s;
+  animation-delay: 3s;
+}
+.flame-main.four {
+  animation-duration: 3.2s;
+  animation-delay: 4s;
+}
+.flame-main.five {
+  animation-duration: 2.5s;
+  animation-delay: 5s;
+}
+@keyframes flameWobble {
+  50% {
+    transform: scale(1,1.2) translate(0, -30px) rotate(-2deg);
+  }
+}
+@keyframes flamefly {
+  0%{
+    transform: translate(0) rotate(180deg);
+  }
+   50% {
+     opacity: 1;
+  }
+  100% {
+    transform: translate(-20px, -100px) rotate(180deg);
+    opacity: 0;
+  }
+}
+/* ai */
